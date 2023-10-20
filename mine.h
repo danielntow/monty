@@ -1,6 +1,11 @@
 #ifndef MINE_H
 #define MINE_H
 
+#define STACK 1
+#define QUEUE 0
+
+extern int mode;
+
 #define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>

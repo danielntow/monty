@@ -31,6 +31,8 @@ void interpOpcode(char *op, char *arg, my_stack_t **stack, unsigned int line)
 {
 if (strcmp(op, "push") == 0)
 	handlePush(arg, stack, line);
+else if (strcmp(op, "queue") == 0)
+	mode = QUEUE;
 else if (strcmp(op, "pall") == 0)
 	pall(stack, line);
 else if (strcmp(op, "pint") == 0)

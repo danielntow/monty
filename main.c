@@ -1,5 +1,7 @@
 #include "mine.h"
 
+int mode = STACK;
+
 /**
 * main - Entry point for Monty bytecode interpreter
 * @argc: The number of command-line arguments.
