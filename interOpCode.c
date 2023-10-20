@@ -35,6 +35,8 @@ else if (strcmp(op, "div") == 0)
 	div_func(stack, line);
 else if (strcmp(op, "mul") == 0)
 	mul(stack, line);
+else if (strcmp(op, "mod") == 0)
+	mod(stack, line);
 else if (strcmp(op, "nop") == 0)
 {
 	/* "nop" does nothing, so we simply skip it */
