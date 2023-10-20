@@ -18,9 +18,9 @@ while ((read = getline(&line, &len, file) != -1))
 
 	line_number++;
 
-	if (read == 0 || line[0] == '\n')
+	if (read == 0 || line[0] == '\n' || line[0] == '#')
 	{
-		continue;
+		continue; /* Skip empty lines and lines starting with # */
 	}
 
 	opcode = strtok(line, " \t\n");
@@ -39,3 +39,4 @@ if (line)
 
 fclose(file);
 }
+
