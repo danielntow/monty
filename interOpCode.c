@@ -28,7 +28,9 @@ else if (strcmp(op, "pop") == 0)
 else if (strcmp(op, "swap") == 0)
 	swap(stack, line);
 else if (strcmp(op, "add") == 0)
-    add(stack, line);
+	add(stack, line);
+else if (strcmp(op, "sub") == 0)
+	sub(stack, line);
 else if (strcmp(op, "nop") == 0)
 {
 	/* "nop" does nothing, so we simply skip it */

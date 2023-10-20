@@ -50,6 +50,7 @@ void interpOpcode(char *op, char *arg, my_stack_t **stack, unsigned int line);
 void pop(my_stack_t **stack, unsigned int line_number);
 void swap(my_stack_t **stack, unsigned int line_number);
 void add(my_stack_t **stack, unsigned int line_number);
+void sub(my_stack_t **stack, unsigned int line_number);
 
 #endif /* MINE_H */
 
