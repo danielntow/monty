@@ -52,7 +52,7 @@ void swap(my_stack_t **stack, unsigned int line_number);
 void add(my_stack_t **stack, unsigned int line_number);
 void sub(my_stack_t **stack, unsigned int line_number);
 void div_func(my_stack_t **stack, unsigned int line_number);
-
+void mul(my_stack_t **stack, unsigned int line_number);
 
 #endif /* MINE_H */
 
