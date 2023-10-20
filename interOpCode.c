@@ -1,6 +1,26 @@
 #include "mine.h"
 
 /**
+ * handlePush - Handles the push opcode
+ * @arg: The argument for the push opcode
+ * @stack: A pointer to the head of the stack
+ * @line: The current line number
+ */
+void handlePush(char *arg, my_stack_t **stack, unsigned int line)
+{
+	if (arg)
+	{
+	push(stack, atoi(arg), line);
+	}
+	else
+	{
+	fprintf(stderr, "L%d: usage: push integer\n", line);
+	exit(EXIT_FAILURE);
+	}
+}
+
+
+/**
 * interpOpcode - Interpret and execute Monty bytecode opcode
 * @op: The opcode to interpret
 * @arg: The argument (if any) for the opcode
@@ -10,15 +30,7 @@
 void interpOpcode(char *op, char *arg, my_stack_t **stack, unsigned int line)
 {
 if (strcmp(op, "push") == 0)
-{
-	if (arg)
-		push(stack, atoi(arg), line);
-	else
-	{
-		fprintf(stderr, "L%d: usage: push integer\n", line);
-		exit(EXIT_FAILURE);
-	}
-}
+	handlePush(arg, stack, line);
 else if (strcmp(op, "pall") == 0)
 	pall(stack, line);
 else if (strcmp(op, "pint") == 0)
@@ -37,6 +49,12 @@ else if (strcmp(op, "mul") == 0)
 	mul(stack, line);
 else if (strcmp(op, "mod") == 0)
 	mod(stack, line);
+else if (strcmp(op, "pchar") == 0)
+	pchar(stack, line);
+else if (strcmp(op, "pstr") == 0)
+	pstr(stack, line);
+else if (strcmp(op, "rotl") == 0)
+	rotl(stack, line);
 else if (strcmp(op, "nop") == 0)
 {
 	/* "nop" does nothing, so we simply skip it */
