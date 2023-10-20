@@ -29,8 +29,10 @@ else if (strcmp(op, "swap") == 0)
 	swap(stack, line);
 else if (strcmp(op, "add") == 0)
     add(stack, line);
- else if (strcmp(op, "nop") == 0)
-        /* "nop" does nothing, so we simply skip it */
+else if (strcmp(op, "nop") == 0)
+{
+	/* "nop" does nothing, so we simply skip it */
+}
 else
 {
 	fprintf(stderr, "L%d: unknown instruction %s\n", line, op);
