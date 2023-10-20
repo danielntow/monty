@@ -31,6 +31,8 @@ else if (strcmp(op, "add") == 0)
 	add(stack, line);
 else if (strcmp(op, "sub") == 0)
 	sub(stack, line);
+else if (strcmp(op, "div") == 0)
+	div_func(stack, line);
 else if (strcmp(op, "nop") == 0)
 {
 	/* "nop" does nothing, so we simply skip it */
