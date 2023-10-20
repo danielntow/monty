@@ -1,5 +1,5 @@
-#ifndef MONTY_H
-#define MONTY_H
+#ifndef MINE_H
+#define MINE_H
 
 #define _GNU_SOURCE
 #include <stdio.h>
@@ -22,7 +22,7 @@ typedef struct stack_s
 	int n;
 	struct stack_s *prev;
 	struct stack_s *next;
-} stack_t;
+} my_stack_t;
 
 /**
 * struct instruction_s - opcode and its function
@@ -35,18 +35,18 @@ typedef struct stack_s
 typedef struct instruction_s
 {
 	char *opcode;
-	void (*f)(stack_t **stack, unsigned int line_number);
+	void (*f)(my_stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 
 /* Function prototypes */
 FILE *openMonty(char *file);
-void readMontyFile(FILE *file, stack_t **stack);
-void freeStack(stack_t *stack);
-void pall(stack_t **stack, unsigned int line_number);
-void push(stack_t **stack, int value, unsigned int line_number);
-void pint(stack_t **stack, unsigned int line_number);
-void interpOpcode(char *op, char *arg, stack_t **stack, unsigned int line)
+void readMontyFile(FILE *file, my_stack_t **stack);
+void freeStack(my_stack_t *stack);
+void pall(my_stack_t **stack, unsigned int line_number);
+void push(my_stack_t **stack, int value, unsigned int line_number);
+void pint(my_stack_t **stack, unsigned int line_number);
+void interpOpcode(char *op, char *arg, my_stack_t **stack, unsigned int line);
 
-#endif /* MONTY_H */
+#endif /* MINE_H */
 
