@@ -57,6 +57,7 @@ void mod(my_stack_t **stack, unsigned int line_number);
 void pchar(my_stack_t **stack, unsigned int line_number);
 void pstr(my_stack_t **stack, unsigned int line_number);
 void rotl(my_stack_t **stack, unsigned int line);
+void rotr(my_stack_t **stack, unsigned int line_number);
 
 #endif /* MINE_H */
 

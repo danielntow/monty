@@ -55,6 +55,8 @@ else if (strcmp(op, "pstr") == 0)
 	pstr(stack, line);
 else if (strcmp(op, "rotl") == 0)
 	rotl(stack, line);
+else if (strcmp(op, "rotr") == 0)
+	rotr(stack, line);
 else if (strcmp(op, "nop") == 0)
 {
 	/* "nop" does nothing, so we simply skip it */
